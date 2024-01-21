@@ -1,4 +1,3 @@
-import "dotenv/config";
 import { DB_URL } from "@/db/config";
 import type { Config } from "drizzle-kit";
 
