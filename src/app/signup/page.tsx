@@ -1,26 +1,22 @@
-import Form from "@/components/Form";
-import Link from "next/link";
+import { SignupForm } from "@/app/signup/signup-form";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+} from "@/components/ui/card";
 
 const Page = async () => {
   return (
-    <>
-      <h1>Sign up</h1>
-      <Form action="/api/signup">
-        <label htmlFor="username">Username</label>
-        <input className="text-black" name="username" id="username" />
-        <br />
-        <label htmlFor="password">Password</label>
-        <input
-          className="text-black"
-          type="text"
-          name="password"
-          id="password"
-        />
-        <br />
-        <button className="mt-4 bg-blue-400 p-4">submit</button>
-      </Form>
-      <Link href="/login">Sign in</Link>
-    </>
+    <Card className="max-w-[400px] w-full mx-auto mt-24">
+      <CardHeader>
+        <h1 className="font-bold text-2xl">Signup</h1>
+        <CardDescription>Fill up to sign up</CardDescription>
+      </CardHeader>
+      <CardContent>
+        <SignupForm />
+      </CardContent>
+    </Card>
   );
 };
 
